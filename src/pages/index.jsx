@@ -27,3 +27,8 @@ const navRollout = document.querySelector('.rollout-nav');
 navButton.addEventListener('click', () => {
   navRollout.classList.toggle('nav-closed');
 });
+
+navRollout.addEventListener('click', (event) => {
+  console.log(event.target);
+  navRollout.classList.add('nav-closed');
+});
