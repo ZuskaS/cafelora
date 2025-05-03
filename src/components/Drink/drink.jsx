@@ -14,9 +14,13 @@ export const Drink = (props) => {
           <Layer key={index} color={layer.color} label={layer.label} />
         ))}
       </div>
-      <form className="drink__controls">
+      <form className="drink__controls" data-id={props.id}>
         <input type="hidden" className="order-id" value="0" />
-        <button className="order-btn">Objednat</button>
+        <button
+          className={`order-btn ${props.ordered ? `order-btn-ordered` : ' '}`}
+        >
+          {props.ordered ? 'Zrušit' : 'Objednat'}
+        </button>
       </form>
     </div>
   );
