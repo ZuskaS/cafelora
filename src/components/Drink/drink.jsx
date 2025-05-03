@@ -6,7 +6,7 @@ export const Drink = (props) => {
       <h3>{props.name}</h3>
       <div className="drink__product"></div>
       <div className="drink__cup">
-        <img src={props.image} />
+        <img src={props.image} alt={props.name} />
       </div>
       <div className="drink__info"></div>
       <form className="drink__controls">
