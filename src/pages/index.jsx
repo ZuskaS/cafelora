@@ -32,3 +32,12 @@ navRollout.addEventListener('click', (event) => {
   console.log(event.target);
   navRollout.classList.add('nav-closed');
 });
+
+const loadDrinks = async () => {
+  const response = await fetch('http://localhost:4001/api/drinks');
+  const data = await response.json();
+  const drinks = data.data;
+  console.log(drinks);
+};
+
+loadDrinks();
